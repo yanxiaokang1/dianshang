@@ -8,6 +8,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -43,6 +44,7 @@ public class MainActivity extends BaseActivity{
         myAdapter = new MyAdapter(getSupportFragmentManager(), list);
         vp.setAdapter(myAdapter);
         tab.setupWithViewPager(vp);
+        Log.i("aaa", "init1: "+list);
         tab.getTabAt(0).setText("风景");
         tab.getTabAt(1).setText("美女");
         tab.getTabAt(2).setText("动漫卡通");
